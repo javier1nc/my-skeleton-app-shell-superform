@@ -7,10 +7,10 @@ import { z } from 'zod';
 export let data;
 
 const userSchema = z.object({
-    firstName: z.string().min(1),
-      lastName: z.string().min(1),
-      email: z.string().email(),
-      employeeNumber: z.number().min(1)
+    firstName: z.string().min(1, "El nombre es muy corto."),
+      lastName: z.string().min(1, "El apellido es muy corto."),
+      email: z.string().email("Email inválido."),
+      employeeNumber: z.number().min(1,"El número debe ser mayor o igual a 1.")
 });
 
 const { form, errors, enhance } = superForm(data.form, {
