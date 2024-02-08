@@ -65,20 +65,10 @@ const { form, errors, enhance } = superForm(data.form, {
 
 <style>
 .form-wrapper{
-  display: flex;
-  justify-content: center;
+  @apply flex justify-center;
 }
-button {
-    background-color: #008001;
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-  }
-  button:hover {
-    background-color: #AAD922;
-  }
+
   .error-para{
-    color: red;
-    font-size: 12px;
+    @apply text-orange-500 text-xs;
   }
 </style>
